@@ -18,11 +18,11 @@ async function main() {
 
     await prisma.exemplo.createMany({
         data: [
-            { nome: 'Maria', turma: 'DS', materia: 'deploy de banco de dados'},
-            { nome: 'João', turma: 'DS', materia: 'deploy de banco de dados'},
-            { nome: 'Pedro', turma: 'Mecanica', materia: 'torno' },
-            { nome: 'Ana', turma: 'Mecanica', materia: 'torno'},
-        ]
+            { nome: 'Maria', turma: 'DS', materia: 'deploy de banco de dados', foto: String },
+            { nome: 'João', turma: 'DS', materia: 'deploy de banco de dados', foto: String },
+            { nome: 'Pedro', turma: 'Mecanica', materia: 'torno', foto: String },
+            { nome: 'Ana', turma: 'Mecanica', materia: 'torno', foto: String },
+        ],
     });
 
     console.log('✅ Seed concluído!');
