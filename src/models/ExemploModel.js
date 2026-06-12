@@ -1,7 +1,7 @@
 import prisma from '../lib/services/prismaClient.js';
 
 export default class ExemploModel {
-    constructor({ id = null, nome, turma = true, materia = null, foto = null } = {}) {
+    constructor({ id = null, nome, turma, materia, foto = null } = {}) {
         this.id = id;
         this.nome = nome;
         this.turma= turma;
@@ -23,7 +23,7 @@ export default class ExemploModel {
     async atualizar() {
         return prisma.exemplo.update({
             where: { id: this.id },
-            data: { nome: this.nome, turma: this.turma, materia: this.materia },
+            data: { nome: this.nome, turma: this.turma, materia: this.materia, foto: this.foto},
         });
     }
 
