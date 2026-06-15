@@ -16,12 +16,12 @@ async function main() {
 
     console.log('📦 Inserindo novos registros...');
 
-    await prisma.exemplo.createMany({
+    await prisma.alunos.createMany({
         data: [
-            { nome: 'Maria', turma: 'DS', materia: 'deploy de banco de dados', foto: String },
-            { nome: 'João', turma: 'DS', materia: 'deploy de banco de dados', foto: String },
-            { nome: 'Pedro', turma: 'Mecanica', materia: 'torno', foto: String },
-            { nome: 'Ana', turma: 'Mecanica', materia: 'torno', foto: String },
+            { nome: 'Maria', turma: 'DS', materia: 'deploy de banco de dados', foto: String() },
+            { nome: 'João', turma: 'DS', materia: 'deploy de banco de dados', foto: String() },
+            { nome: 'Pedro', turma: 'Mecanica', materia: 'torno', foto: String() },
+            { nome: 'Ana', turma: 'Mecanica', materia: 'torno', foto: String() },
         ],
     });
 
