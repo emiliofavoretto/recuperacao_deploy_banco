@@ -2,6 +2,9 @@ import express from 'express';
 import 'dotenv/config';
 import alunosRoutes from './routes/alunosRoute.js';
 import { apiKey } from './lib/middlewarer/apiKey.js';
+import arquivoRoutes from './routes/arquivoRoute.js';
+
+app.use('/api/exemplos', apiKey, arquivoRoutes);
 
 const app = express();
 const PORT = process.env.PORT || 3001;
